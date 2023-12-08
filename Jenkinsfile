@@ -1,24 +1,24 @@
 node {
     def app
 
-    stage('Clone repository') {
+    // stage('Clone repository') {
       
 
-        checkout scm
-    }
+    //     checkout scm
+    // }
 
     stage('Build image') {
   
        app = docker.build("karthikparthiban/test")
     }
 
-    stage('Test image') {
+    // stage('Test image') {
   
 
-        app.inside {
-            sh 'echo "Tests passed"'
-        }
-    }
+    //     app.inside {
+    //         sh 'echo "Tests passed"'
+    //     }
+    // }
 
     stage('Push image') {
         
